@@ -22,9 +22,6 @@ function fetchWeather() {
 		success: function (data) { weatherData = data;	/* Store our newly aquired weather data */ }
 	});
 	
-	// Update the fetch time
-	weatherUpdated = moment().unix().valueOf();
-	
 	// Fetch the weather every fifteen minutes
 	setTimeout(function() { fetchWeather();  }, 900000);
 }
